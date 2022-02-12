@@ -1,6 +1,6 @@
 [package]
 name = "aviutl-keyconfig"
-version = "0.0.0"
+version = "0.1.0"
 edition = "2021"
 authors = ["karoterra <karoterra2008@gmail.com>"]
 

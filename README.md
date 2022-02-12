@@ -20,7 +20,7 @@
 ### コマンドラインから使う場合
 
 ```
-aviutl-keyconfig 0.0.0
+aviutl-keyconfig 0.1.0
 Generate AviUtl key config list
 
 USAGE:
@@ -42,6 +42,10 @@ OPTIONS:
 
 このソフトウェアは、MIT ライセンスのもとで公開されます。
 詳細は [LICENSE](LICENSE) を参照してください。
+
+## 更新履歴
+
+更新履歴は [CHANGELOG](CHANGELOG.md) を参照してください。
 
 ## 参考
 
