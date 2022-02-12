@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AviUtl ショートカット一覧</title>
+    <style>
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        display: block;
+        width: 100%;
+        overflow: auto;
+      }
+
+      table th {
+        font-weight: 600;
+      }
+
+      table td,
+      table th {
+        padding: 6px 13px;
+        border: 1px solid #e0e3e6;
+      }
+
+      table tr {
+        background-color: #fff;
+        border-top: 1px solid #c6cbd2;
+      }
+
+      table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+
+      kbd {
+        font-family: HackGenNerd,SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      kbd.key {
+        display: inline-block;
+        padding: 3px 5px;
+        font-size: .85em;
+        line-height: 1;
+        color: #444d56;
+        vertical-align: middle;
+        background-color: #fafbfc;
+        border: 1px solid #d1d5da;
+        border-radius: 3px;
+        box-shadow: inset 0 -1px 0 #d1d5da;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>種類</th>
+          <th>名前</th>
+          <th>キー</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each commands}}
+          <tr>
+            <td>{{this.id}}</td>
+            <td>{{#if this.is_plugin}}Plugin{{else}}System{{/if}}</td>
+            <td>{{this.name}}</td>
+            <td>
+              {{#if this.modifier}}
+                <kbd>
+                  {{#if this.shift}}<kbd class="key">Shift</kbd> +{{/if}}
+                  {{#if this.ctrl}}<kbd class="key">Ctrl</kbd> +{{/if}}
+                  {{#if this.alt}}<kbd class="key">Alt</kbd> +{{/if}}
+                  <kbd class="key">{{this.key}}</kbd>
+                </kbd>
+              {{else}}
+                <kbd class="key">{{this.key}}</kbd>
+              {{/if}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </body>
+</html>
