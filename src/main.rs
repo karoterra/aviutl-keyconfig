@@ -12,8 +12,9 @@ mod command;
 mod key;
 use command::Command;
 
+/// Generate AviUtl key config list
 #[derive(Parser)]
-#[clap(author, version, about = "Generate AviUtl key config list")]
+#[clap(version, about)]
 struct Args {
     /// AviUtl key config file (*.key)
     input_file: PathBuf,
